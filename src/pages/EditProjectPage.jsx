@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios"; // used for calling the API
-import { useParams } from "react-router-dom";
 
 function EditProjectPage() {
 
-  const { projectId } = useParams() // destructuring the project id from dynamic params (see App.jsx => :projectId)
+  const navigate = useNavigate()
+  const { projectId } = useParams() // destructuring the project id from dynamic params (see App.jsx => /:projectId)
   
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [ title, setTitle ] = useState("");
+  const [ description, setDescription ] = useState("");
+  // const [ isLoading, setIsLoading ] = useState(true)
 
   const handleFormSubmit = async(e) => {
     e.preventDefault();
@@ -30,6 +32,8 @@ function EditProjectPage() {
       //todo proper error handling here
     }
   }; 
+
+  // if (isLoading) return <h3>Loading...</h3> //todo proper loading animation here
 
   return (
     <div className="EditProjectPage">

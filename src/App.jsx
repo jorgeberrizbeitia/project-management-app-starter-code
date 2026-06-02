@@ -1,13 +1,12 @@
-import './App.css'
-
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import ProjectListPage from "./pages/ProjectListPage";
 import CreateProjectPage from "./pages/CreateProjectPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import EditProjectPage from "./pages/EditProjectPage";
+
+import Navbar from "./components/Navbar";
 
 function App() {
 
@@ -25,7 +24,7 @@ function App() {
       <Route exact path="/projects/create" element={<CreateProjectPage />} />
       <Route path="/projects/edit/:projectId" element={ <EditProjectPage /> } />
 
-      {/* error handling routes should be here */}
+      {/* //! error handling routes should be here */}
 
     </Routes>
     

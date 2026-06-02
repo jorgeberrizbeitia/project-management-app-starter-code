@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 import axios from "axios"; // used for calling the API
 
 function CreateProjectPage() {
+
+  const navigate = useNavigate()
+  
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
