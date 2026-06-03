@@ -11,7 +11,7 @@ function ProjectListPage() {
 
   useEffect(() => {
     getData()
-  })
+  }, [])
 
   const getData = async() => {
     try {

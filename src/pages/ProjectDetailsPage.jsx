@@ -9,7 +9,7 @@ function ProjectDetailsPage () {
 
   const { projectId } = useParams() // destructuring the project id from dynamic params (see App.jsx => /:projectId)
 
-  const [ product, setProduct ] = useState(null)
+  const [ project, setProject ] = useState(null)
   const [ isLoading, setIsLoading ] = useState(true)
 
   useEffect(() => {

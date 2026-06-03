@@ -15,7 +15,7 @@ function EditProjectPage() {
     e.preventDefault();
 
     try {
-      // call the API here to edit one task...
+      // call the API here to edit one project...
       
     } catch (error) {
       console.log(error)
@@ -25,7 +25,7 @@ function EditProjectPage() {
 
   const deleteProject = async() => {
     try {
-      // call the API here to delete one task...
+      // call the API here to delete one project...
       
     } catch (error) {
       console.log(error)
